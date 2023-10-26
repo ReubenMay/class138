@@ -62,7 +62,7 @@ function startGame(){
   document.getElementById("status").innerHTML="Game Is Loading";
 }
 function game(){
-  console.log("nosex = " + nosex +", nosey = " + nosey);
+   console.log("nosex = " + nosex +", nosey = " + nosey);
   instializeInDraw();
   moveEnvironment(mario);
   drawSprites();
@@ -123,7 +123,7 @@ function game(){
 
 // change game status if any key is pressed
 function changeGameStatud(character){
-  if((keyDown(control.up) ||keyDown(control.left)||keyDown(control.right) )&& gameConfig.status==="start") {
+  if(GameStatus=="start"&& && gameConfig.status==="start") {
     world_start.play();
     initializeCharacterStatus(mario);
     gameConfig.status= "play";
